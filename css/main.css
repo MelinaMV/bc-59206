@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -9,4 +10,59 @@
 body {
   box-sizing: border-box;
   background-color: red;
+}
+
+body {
+  font-family: "Open sans", sans-serif;
+}
+
+/************************************
+    Estilos del Header
+************************************/
+.main-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu {
+  display: none;
+}
+#menu:checked + .nav-bar {
+  display: block;
+}
+#menu:checked ~ .search-bar .menu-toggle__label {
+  background-color: yellow;
+}
+
+/************************************
+    Estilos del NAV BAR
+************************************/
+.nav-bar {
+  background-color: mediumaquamarine;
+}
+.nav-bar__nav-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .nav-bar__nav-list {
+    flex-direction: column;
+  }
+}
+.nav-bar__nav-item {
+  text-align: center;
+  background-color: pink;
+}
+.nav-bar__nav-link {
+  display: block;
+  background-color: purple;
+  color: white;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

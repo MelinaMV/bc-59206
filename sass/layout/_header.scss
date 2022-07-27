@@ -1,0 +1,62 @@
+/************************************
+    Estilos del Header
+************************************/
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+}
+
+#menu {
+  display: none; //1ro esta oculto
+  &:checked + .nav-bar {
+    display: block;
+  } //pseudoclase en scss
+
+  //permite selecc adyacentes ~~
+  &:checked ~ .search-bar .menu-toggle__label {
+    background-color: yellow;
+  }
+}
+
+//pseudoclase en css
+//#menu:checked
+
+/************************************
+    Estilos del NAV BAR
+************************************/
+
+.nav-bar {
+  background-color: mediumaquamarine;
+
+  &__nav-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      & {
+        flex-direction: column;
+      }
+    }
+  }
+  
+  &__nav-item {
+    text-align: center;
+    background-color: pink;
+  }
+
+  &__nav-link {
+    display: block;
+    background-color: purple;
+    color: white;
+    padding: 1em 2em;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    & {
+      display: none;
+    }
+  }
+}
