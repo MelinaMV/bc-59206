@@ -1,0 +1,17 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css",
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css",
+        }
+
+    ]
+}
+//configuramos el watch Sass
+//para que compile los archivos scss y los transforme en css para que los entienda el nav
